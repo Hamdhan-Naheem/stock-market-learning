@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   storeInformationView: {
-    padding: 20,
-    margin: 10,
+    padding: 10,
+    margin: 5,
     width: 300,
     borderRadius: 20,
     alignItems: 'center',
@@ -51,6 +51,11 @@ const languages = [
     key: '1',
     code: 'si',
     name: 'සිංහල',
+  },
+  {
+    key: '2',
+    code: 'ta',
+    name: 'தமிழ்',
   },
 ];
 

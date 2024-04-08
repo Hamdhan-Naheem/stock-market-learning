@@ -12,11 +12,25 @@ import { TouchableOpacity } from 'react-native';
 
 import Drawe from '../screens/Drawer';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import Contents from '../screens/Contents';
 
 import SignInScreen from '../screens/SignInScreen';
 import { RootStackParamList } from '../types';
 
 import LinkingConfiguration from './LinkingConfiguration';
+import Stock from '../screens/Stock';
+import StockTypes from '../screens/StockTypes';
+import StockIndices from '../screens/StockIndices';
+import InvestmentGoals from '../screens/InvestmentGoals';
+import InvestmentAccounts from '../screens/InvestmentAccounts';
+import MarketOrders from '../screens/MarketOrders';
+import Dividents from '../screens/Dividents';
+import StockAnalysis from '../screens/StockAnalysis';
+import LongInvesting from '../screens/LongInvesting';
+import News from '../screens/News';
+import Strategies from '../screens/Strategies';
+import Brokers from '../screens/Brokers';
+import StockPrediction from '../screens/StockPrediction'
 
 const MyTheme = {
   dark: false,
@@ -77,16 +91,195 @@ function RootNavigator({
             component={NotFoundScreen}
             options={{ title: 'Oops!' }}
           />
+
+          <Stack.Screen
+            name="Contents"
+            component={Contents}
+            options={{
+              title: 'CONTENTS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+<Stack.Screen
+            name="stockPrediction"
+            component={StockPrediction}
+            options={{
+              title: 'STOCK PREDICTION',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="stock"
+            component={Stock}
+            options={{
+              title: 'WHAT IS STOCK',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+
+          <Stack.Screen
+            name="stockIndices"
+            component={StockIndices}
+            options={{
+              title: 'STOCK INDICES',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="investmentGaols"
+            component={InvestmentGoals}
+            options={{
+              title: 'Investment Goals & Risk Tolerance',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="investmentAccounts"
+            component={InvestmentAccounts}
+            options={{
+              title: 'INVESTMENT ACCOUNTS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="marketOrders"
+            component={MarketOrders}
+            options={{
+              title: 'MARKET ORDER VS LIMIT ORDERS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="divedents"
+            component={Dividents}
+            options={{
+              title: 'DIVIDENDS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="stockAnalysis"
+            component={StockAnalysis}
+            options={{
+              title: 'STOCK ANALYSIS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="longTerm"
+            component={LongInvesting}
+            options={{
+              title: 'LONG VS SHORT INVESTING',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="news"
+            component={News}
+            options={{
+              title: 'FINANCIAL NEWS AND RESEARCH',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="Strategies"
+            component={Strategies}
+            options={{
+              title: 'INVESTMENT STRATEGIES',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
+
+          <Stack.Screen
+            name="brokers"
+            component={Brokers}
+            options={{
+              title: 'SRILANKA STOCK BROKERS',
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Homebuttonfunction
+                  onPress={() => navigation.navigate('TabOne')}
+                />
+              ),
+            }}
+          />
         </>
       ) : (
         <Stack.Screen
           name="sighIn"
           // eslint-disable-next-line react/no-children-prop
-          children={() => (
-            <SignInScreen
-              googleSignIn={googleSignIn}
-            />
-          )}
+          children={() => <SignInScreen googleSignIn={googleSignIn} />}
           //  component={SignInScreen}
           //  initialParams={{googleSignIn}}
           options={{ headerShadowVisible: false, headerShown: false }}
@@ -101,7 +294,7 @@ export default function Navigation({
   googleSignIn,
   signOut,
 }: {
-  oAuthUser: {}|null;
+  oAuthUser: {};
   googleSignIn: () => void;
   signOut: () => void;
 }) {
@@ -115,4 +308,3 @@ export default function Navigation({
     </NavigationContainer>
   );
 }
-

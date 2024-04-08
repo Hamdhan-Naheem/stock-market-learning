@@ -16,13 +16,13 @@ export default function useCachedResources() {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
-        //   'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
-        //   'baloo-regular': require('../assets/fonts/Baloo2-Regular.ttf'),
-        //   'baloo-bold': require('../assets/fonts/Baloo2-Bold.ttf'),
-        //   'Oswald-Regular': require('../assets/fonts/Oswald-Regular.ttf'),
-        //   ComicSansMS3: require('../assets/fonts/ComicSansMS3.ttf'),
-        //   commiNorm: require('../assets/fonts/design.graffiti.comicsansms.ttf'),
-        //   commiBold: require('../assets/fonts/design.graffiti.comicsansmsgras.ttf'),
+          'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          'baloo-regular': require('../assets/fonts/Baloo2-Regular.ttf'),
+          'baloo-bold': require('../assets/fonts/Baloo2-Bold.ttf'),
+          'Oswald-Regular': require('../assets/fonts/Oswald-Regular.ttf'),
+          ComicSansMS3: require('../assets/fonts/ComicSansMS3.ttf'),
+          commiNorm: require('../assets/fonts/design.graffiti.comicsansms.ttf'),
+          commiBold: require('../assets/fonts/design.graffiti.comicsansmsgras.ttf'),
         });
       } catch (e) {
         console.warn(e);

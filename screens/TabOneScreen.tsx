@@ -116,13 +116,6 @@ export default function TabOneScreen(prop: {
         </TouchableOpacity>
       </View>
 
-      {/* <View style={styles.backGroundImgContainer}>
-        <Image
-          source={require('../assets/images/bg.png')}
-          style={styles.backgroundImg}
-        />
-      </View> */}
-
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}

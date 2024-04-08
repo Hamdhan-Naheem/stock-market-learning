@@ -1,8 +1,6 @@
-import { Auth } from 'aws-amplify';
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { SocialIcon } from 'react-native-elements';
-import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 
 const styles = StyleSheet.create({
   container: {
@@ -44,16 +42,6 @@ interface AuthenticationProps {
 }
 
 function SignInScreen({ googleSignIn }: AuthenticationProps) {
-  const signInWithProvider = async (provider) => {
-    try {
-      await Auth.federatedSignIn({
-        provider: provider,
-      });
-      console.log(`Sign-in with ${provider} successful`);
-    } catch (error) {
-      console.error(`Error signing in with ${provider}:`, error);
-    }
-  };
   return (
     <View style={styles.container}>
       <Text
@@ -81,7 +69,7 @@ function SignInScreen({ googleSignIn }: AuthenticationProps) {
           title="Sign up with Google"
           button
           type="google"
-          onPress={() => signInWithProvider(CognitoHostedUIIdentityProvider.Google)}
+          onPress={() => googleSignIn()}
         />
       </View>
     </View>
